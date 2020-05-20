@@ -21,121 +21,45 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li> @Html.ActionLink("Create new item", "#", "#")</li>
-                </ul>
-                    @Html.Partial("_LoginPartial")
-                <ul class="navbar-collapse collapse">
+                    <li>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Create new entry</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("CPU", "Create", "CPU")</li>
+                            <li>@Html.ActionLink("Motherboard", "Create", "Motherboard")</li>
+                            <li>@Html.ActionLink("Storage", "#", "#")</li>
+                            <li>@Html.ActionLink("Video Card", "#", "#")</li>
+                            <li>@Html.ActionLink("Power Supply Unit", "#", "#")</li>
+                            <li>@Html.ActionLink("Memory", "#", "#")</li>
+                            <li>@Html.ActionLink("Case", "Create", "Case")</li>
+
+                        </ul>
+
+                    </li>
+
                     <!--Browse Inventory Drop down-->
                     <li>
-                        @*<button type="button" class="navbar-btn btn-primary" data-toggle="collapse" data-target="#info">
-                                Browse Inventory
-                            </button>*@
-                        <a href="#info" class="navbar-collapse navbar-inverse" data-toggle="collapse">Browse Inventory</a>
-                        <div id="info" class="collapse">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="~/Content/Assets/Cpu.jpg" alt="Card image" />
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">CPU</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="~/Content/Assets/Motherboard.jpg" alt="Card image"/>
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">Motherboard</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="~/Content/Assets/powersupplyunit.jpg" alt="Card image">
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">Power Supply Unit</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">Displays</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="~/Content/Assets/storage.jpg" alt="Card image">
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">Storage</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="~/Content/Assets/videocard.jpg" alt="Card image">
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">Video Card</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="~/Content/Assets/monitor.jpg" alt="Card image">
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">Memory</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="card" style="width:200px">
-                                        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-                                        <div class="card-img-overlay">
-                                            <div class="card-body text-center">
-                                                <a href="#" class="card-text text-decoration-none stretched-link text-dark">Cables</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Browse Inventory</a>
 
-                            @*<ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("CPU", "#", "#")</li>
-                                    <li>@Html.ActionLink("Motherboard", "#", "#")</li>
-                                    <li>@Html.ActionLink("Storage", "#", "#")</li>
-                                    <li>@Html.ActionLink("Video Card", "#", "#")</li>
-                                    <li>@Html.ActionLink("Power Supply Unit", "#", "#")</li>
-                                    <li>@Html.ActionLink("Memory", "#", "#")</li>
-                                    <li>@Html.ActionLink("Displays", "#", "#")</li>
-                                    <li>@Html.ActionLink("CPU", "#", "#")</li>
-                                </ul>*@
-                        </div>
+
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("CPU", "Index", "CPU")</li>
+                                <li>@Html.ActionLink("Motherboard", "#", "#")</li>
+                                <li>@Html.ActionLink("Storage", "#", "#")</li>
+                                <li>@Html.ActionLink("Video Card", "#", "#")</li>
+                                <li>@Html.ActionLink("Power Supply Unit", "#", "#")</li>
+                                <li>@Html.ActionLink("Memory", "#", "#")</li>
+                                <li>@Html.ActionLink("Case", "Index", "Case")</li>
+                                
+                            </ul>
                     </li>
                 </ul>
-
-
-
-
-
+                @Html.Partial("_LoginPartial")
             </div>
+            
+
+
+
+
         </div>
     </div>
     <div class="container body-content">

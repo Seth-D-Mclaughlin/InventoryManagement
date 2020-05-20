@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E2AB544-FAAB-46C3-9A9C-30A0EB655FAD}</ProjectGuid>
+    <ProjectGuid>{2B1E27F4-F7A8-4491-9F6E-D80933C125BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Inventory.DATA</RootNamespace>
-    <AssemblyName>Inventory.DATA</AssemblyName>
+    <RootNamespace>Inventory.SERVICES</RootNamespace>
+    <AssemblyName>Inventory.SERVICES</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -54,33 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HARDWARE\Case.cs" />
-    <Compile Include="HARDWARE\CPU.cs" />
-    <Compile Include="HARDWARE\CPUCooler.cs" />
-    <Compile Include="HARDWARE\ExternalStorage.cs" />
-    <Compile Include="HARDWARE\InternalStorage.cs" />
-    <Compile Include="HARDWARE\Memory.cs" />
-    <Compile Include="HARDWARE\Motherboard.cs" />
-    <Compile Include="HARDWARE\OpticalDrive.cs" />
-    <Compile Include="HARDWARE\PowerSupplyUnit.cs" />
-    <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202005192014535_InitialMigration.cs" />
-    <Compile Include="Migrations\202005192014535_InitialMigration.Designer.cs">
-      <DependentUpon>202005192014535_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="CaseService.cs" />
+    <Compile Include="CPUCoolerService.cs" />
+    <Compile Include="CPUService.cs" />
+    <Compile Include="MemoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="HARDWARE\Storage.cs" />
-    <Compile Include="HARDWARE\VideoCard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.DATA\Inventory.DATA.csproj">
+      <Project>{3E2AB544-FAAB-46C3-9A9C-30A0EB655FAD}</Project>
+      <Name>Inventory.DATA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.MODELS\Inventory.MODELS.csproj">
+      <Project>{FDE106FC-B4E9-413C-A5B1-6DE801DB1355}</Project>
+      <Name>Inventory.MODELS</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005192014535_InitialMigration.resx">
-      <DependentUpon>202005192014535_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

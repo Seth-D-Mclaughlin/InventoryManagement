@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HARDWARE Controllers\CPUController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -241,6 +242,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\CPU\Create.cshtml" />
+    <Content Include="Views\CPU\Delete.cshtml" />
+    <Content Include="Views\CPU\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +261,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.DATA\Inventory.DATA.csproj">
+      <Project>{3E2AB544-FAAB-46C3-9A9C-30A0EB655FAD}</Project>
+      <Name>Inventory.DATA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.MODELS\Inventory.MODELS.csproj">
+      <Project>{fde106fc-b4e9-413c-a5b1-6de801db1355}</Project>
+      <Name>Inventory.MODELS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.SERVICES\Inventory.SERVICES.csproj">
+      <Project>{2b1e27f4-f7a8-4491-9f6e-d80933c125bd}</Project>
+      <Name>Inventory.SERVICES</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

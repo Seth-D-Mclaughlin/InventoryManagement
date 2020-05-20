@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace Inventory.MVC.Models
+namespace Inventory.DATA
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -24,10 +24,24 @@ namespace Inventory.MVC.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<CPU> CPUs { get; set; }
+        public DbSet<CPUCooler> CPUCoolers { get; set; }
+        public DbSet<Case> Cases { get; set; }
+        public DbSet<PowerSupplyUnit> PowerSupplyUnits { get; set; }
+        public DbSet<Storage> Storages { get; set; }
+        public DbSet<ExternalStorage> ExternalStorages { get; set; }
+        public DbSet<InternalStorage> InternalStorages { get; set; }
+        
+        public DbSet<Memory> Memories { get; set; }
+        public DbSet<Motherboard> Motherboards { get; set; }
+        public DbSet<OpticalDrive> OpticalDrives { get; set; }
+        public DbSet<VideoCard> VideoCards { get; set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        
     }
 }

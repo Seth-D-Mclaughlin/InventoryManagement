@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Inventory.MVC.Models;
+using Inventory.DATA;
 
 namespace Inventory.MVC
 {
