@@ -74,6 +74,33 @@ namespace Inventory.SERVICES
             };
             return cpuDetail;
         }
+        public bool UpdateCpu(CPUEdit model)
+        {
+            using (_db)
+            {
+                var cpuEntity =
+                    _db
+                        .CPUs
+                        .SingleOrDefault(e => e.Id == model.Id);
+
+                cpuEntity.Id = model.Id;
+                cpuEntity.Name = model.Name;
+                cpuEntity.Manufacturer = model.Manufacturer;
+                cpuEntity.CoreCount = model.CoreCount;
+                cpuEntity.CoreClock = model.CoreClock;
+                cpuEntity.BoostClock = model.BoostClock;
+                cpuEntity.Series = model.Series;
+                cpuEntity.CoreFamily = model.CoreFamily;
+                cpuEntity.Socket = model.Socket;
+                cpuEntity.IsAvailable = model.IsAvailable;
+                cpuEntity.MicroArchitecture = model.MicroArchitecture;
+                cpuEntity.ThermalDesignPower = model.ThermalDesignPower;
+                cpuEntity.IntegratedGraphics = model.IntegratedGraphics;
+                cpuEntity.SimultaneousMultithreading = model.SimultaneousMultithreading;
+
+                return _db.SaveChanges() == 1;
+            }
+        }
 
         // Delete by ID
         public bool DeleteCpu(int cpuId)
@@ -83,7 +110,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .CPUs
-                        .SingleOrDefault(e => e.Id == cpuId );
+                        .SingleOrDefault(e => e.Id == cpuId);
 
                 _db.CPUs.Remove(entity);
 

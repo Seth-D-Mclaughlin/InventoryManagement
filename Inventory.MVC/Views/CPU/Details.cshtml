@@ -1,0 +1,122 @@
+﻿@model Inventory.MODELS.CPUModels.CPUDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CPUDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoreCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoreCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoreClock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoreClock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoostClock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoostClock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Series)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Series)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MicroArchitecture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MicroArchitecture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoreFamily)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoreFamily)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Socket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Socket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntegratedGraphics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntegratedGraphics)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SimultaneousMultithreading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SimultaneousMultithreading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThermalDesignPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThermalDesignPower)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
