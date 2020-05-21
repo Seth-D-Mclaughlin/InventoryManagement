@@ -1,0 +1,98 @@
+﻿@model Inventory.MODELS.MemeoryModels.MemoryDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MemoryDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modules)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modules)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CASLatency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CASLatency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Voltage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voltage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Timing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Timing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeatSpreader)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeatSpreader)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn-sm btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index",new { }, htmlAttributes: new { @class = "btn-sm btn-info" })
+</p>

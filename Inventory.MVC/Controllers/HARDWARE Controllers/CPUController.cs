@@ -97,6 +97,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             ModelState.AddModelError("", "Your CPU information could not be updated.");
             return View();
         }
+
         // GET : CPU/Delete/{id}
         public ActionResult Delete(int id)
         {
@@ -110,6 +111,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             }
             return View(model);
         }
+
         // POST : CPU/Delete/{id}
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

@@ -51,21 +51,30 @@ namespace Inventory.SERVICES
         // Get (Details by ID)
         public MemoryDetail GetMemoryById(int? memId)
         {
-            var memoryEntity = _db.Memories.Find(memId);
-            var memDetail = new MemoryDetail
+            using (var _db = new ApplicationDbContext())
             {
-                Name = memoryEntity.Name,
-                Manufacturer = memoryEntity.Manufacturer,
-                Speed = memoryEntity.Speed,
-                Type = memoryEntity.Type,
-                Modules = memoryEntity.Modules,
-                CASLatency = memoryEntity.CASLatency,
-                Voltage = memoryEntity.Voltage,
-                Timing = memoryEntity.Timing,
-                HeatSpreader = memoryEntity.HeatSpreader,
-                IsAvailable = memoryEntity.IsAvailable
-            };
-            return memDetail;
+
+                var memoryEntity =
+                    _db
+                    .Memories
+                    .SingleOrDefault(e => e.Id == memId);
+                return
+                    new MemoryDetail
+                    {
+                        Id = memoryEntity.Id,
+                        Name = memoryEntity.Name,
+                        Manufacturer = memoryEntity.Manufacturer,
+                        Speed = memoryEntity.Speed,
+                        Type = memoryEntity.Type,
+                        Modules = memoryEntity.Modules,
+                        CASLatency = memoryEntity.CASLatency,
+                        Voltage = memoryEntity.Voltage,
+                        Timing = memoryEntity.Timing,
+                        HeatSpreader = memoryEntity.HeatSpreader,
+                        IsAvailable = memoryEntity.IsAvailable
+                    };
+
+            }
         }
         public bool UpdateMemory(MemoryEdit model)
         {

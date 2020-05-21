@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\CPUController.cs" />
+    <Compile Include="Controllers\HARDWARE Controllers\MemoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -247,6 +248,11 @@
     <Content Include="Views\CPU\Index.cshtml" />
     <Content Include="Views\CPU\Details.cshtml" />
     <Content Include="Views\CPU\Edit.cshtml" />
+    <Content Include="Views\Memory\Index.cshtml" />
+    <Content Include="Views\Memory\Details.cshtml" />
+    <Content Include="Views\Memory\Create.cshtml" />
+    <Content Include="Views\Memory\Delete.cshtml" />
+    <Content Include="Views\Memory\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
