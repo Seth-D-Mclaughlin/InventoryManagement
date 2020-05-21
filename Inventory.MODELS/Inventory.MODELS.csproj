@@ -44,12 +44,12 @@
   <ItemGroup>
     <Compile Include="CASEModels\CaseCreate.cs" />
     <Compile Include="CASEModels\CaseDetail.cs" />
+    <Compile Include="CASEModels\CaseEdit.cs" />
     <Compile Include="CASEModels\CaseListItem.cs" />
     <Compile Include="CPUCoolerModels\CPUCoolerCreate.cs" />
     <Compile Include="CPUCoolerModels\CPUCoolerDetail.cs" />
     <Compile Include="CPUCoolerModels\CPUCoolerListItem.cs" />
     <Compile Include="CPUModels\CPUCreate.cs" />
-    <Compile Include="CPUModels\CPUDelete.cs" />
     <Compile Include="CPUModels\CPUDetail.cs" />
     <Compile Include="CPUModels\CPUEdit.cs" />
     <Compile Include="CPUModels\CPUListItem.cs" />

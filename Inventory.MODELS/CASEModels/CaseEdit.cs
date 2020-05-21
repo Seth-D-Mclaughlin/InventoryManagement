@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Inventory.MODELS.CASEModels
 {
-    public class CaseCreate
+    public class CaseEdit
     {
+        [Required]
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
@@ -20,11 +22,11 @@ namespace Inventory.MODELS.CASEModels
         public string Color { get; set; }
 
         [Required]
-        [Display(Name="Power Supply")]
+        [Display(Name = "Power Supply")]
         public string PowerSupply { get; set; }
 
         [Required]
-        [Display(Name="Tower Size")]
+        [Display(Name = "Tower Size")]
         public string Type { get; set; }
 
         [Required]
@@ -67,16 +69,16 @@ namespace Inventory.MODELS.CASEModels
 
         public int Internal25Bay { get; set; }
 
-        
+
         [Display(Name = "Full Height for Expansion Slot")]
 
         public int? FullHeightExpansionSlots { get; set; }
 
-        
+
         [Display(Name = "Half Height for Expansion Slot")]
 
         public int? HalfHeightExpansionSlots { get; set; }
-        
+
         [Display(Name = "In use?")]
         public bool IsAvailable { get; set; }
     }

@@ -1,0 +1,153 @@
+﻿@model Inventory.MODELS.CASEModels.CaseDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<div>
+    <h3>Are you sure you want to remove this: <b>"@Html.DisplayFor(model => model.Name)"</b>?</h3>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PowerSupply)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PowerSupply)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SidePanelWindow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SidePanelWindow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PowerSupplyShroud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PowerSupplyShroud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrontPanelUSB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrontPanelUSB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotherboardFormFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotherboardFormFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.External52Bay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.External52Bay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.External35Bay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.External35Bay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Internal35Bay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Internal35Bay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Internal25Bay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Internal25Bay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullHeightExpansionSlots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullHeightExpansionSlots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HalfHeightExpansionSlots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HalfHeightExpansionSlots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index", new { }, htmlAttributes: new { @class = "btn-sm btn-primary" })
+        </div>
+    }
+</div>

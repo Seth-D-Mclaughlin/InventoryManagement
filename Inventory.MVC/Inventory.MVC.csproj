@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HARDWARE Controllers\CaseController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\CPUController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\MemoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -253,6 +254,11 @@
     <Content Include="Views\Memory\Create.cshtml" />
     <Content Include="Views\Memory\Delete.cshtml" />
     <Content Include="Views\Memory\Edit.cshtml" />
+    <Content Include="Views\Case\Index.cshtml" />
+    <Content Include="Views\Case\Create.cshtml" />
+    <Content Include="Views\Case\Details.cshtml" />
+    <Content Include="Views\Case\Edit.cshtml" />
+    <Content Include="Views\Case\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

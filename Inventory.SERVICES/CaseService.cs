@@ -59,28 +59,77 @@ namespace Inventory.SERVICES
         // Get (Details by ID)
         public CaseDetail GetCaseById(int caseId)
         {
-            var caseEntity = _db.Cases.Find(caseId);
-            var caseDetail = new CaseDetail
+            using (var _db = new ApplicationDbContext())
             {
-                Name = caseEntity.Name,
-                Manufacturer = caseEntity.Manufacturer,
-                Color = caseEntity.Color,
-                PowerSupply = caseEntity.PowerSupply,
-                Type = caseEntity.Type,
-                SidePanelWindow = caseEntity.SidePanelWindow,
-                PowerSupplyShroud = caseEntity.PowerSupplyShroud,
-                FrontPanelUSB = caseEntity.FrontPanelUSB,
-                MotherboardFormFactor = caseEntity.MotherboardFormFactor,
-                External52Bay = caseEntity.External52Bay,
-                External35Bay = caseEntity.External35Bay,
-                Internal35Bay = caseEntity.Internal35Bay,
-                Internal25Bay = caseEntity.Internal25Bay,
-                FullHeightExpansionSlots = caseEntity.FullHeightExpansionSlots,
-                HalfHeightExpansionSlots = caseEntity.HalfHeightExpansionSlots,
-                IsAvailable = caseEntity.IsAvailable
-            };
-            return caseDetail;
+                var caseEntity =
+                    _db
+                    .Cases
+                    .SingleOrDefault(e => e.Id == caseId);
+                return
+                new CaseDetail
+                {
+                    Id = caseEntity.Id,
+                    Name = caseEntity.Name,
+                    Manufacturer = caseEntity.Manufacturer,
+                    Color = caseEntity.Color,
+                    PowerSupply = caseEntity.PowerSupply,
+                    Type = caseEntity.Type,
+                    SidePanelWindow = caseEntity.SidePanelWindow,
+                    PowerSupplyShroud = caseEntity.PowerSupplyShroud,
+                    FrontPanelUSB = caseEntity.FrontPanelUSB,
+                    MotherboardFormFactor = caseEntity.MotherboardFormFactor,
+                    External52Bay = caseEntity.External52Bay,
+                    External35Bay = caseEntity.External35Bay,
+                    Internal35Bay = caseEntity.Internal35Bay,
+                    Internal25Bay = caseEntity.Internal25Bay,
+                    FullHeightExpansionSlots = caseEntity.FullHeightExpansionSlots,
+                    HalfHeightExpansionSlots = caseEntity.HalfHeightExpansionSlots,
+                    IsAvailable = caseEntity.IsAvailable
+                };
+            }
         }
+        public bool UpdateCase(CaseEdit model)
+        {
+            using (var _db = new ApplicationDbContext())
+            {
+                var caseEntity =
+                    _db
+                    .Cases
+                    .SingleOrDefault(e => e.Id == model.Id);
+                caseEntity.Name = model.Name;
+                caseEntity.Manufacturer = model.Manufacturer;
+                caseEntity.Color = model.Color;
+                caseEntity.PowerSupply = model.PowerSupply;
+                caseEntity.Type = model.Type;
+                caseEntity.SidePanelWindow = model.SidePanelWindow;
+                caseEntity.PowerSupplyShroud = model.PowerSupplyShroud;
+                caseEntity.FrontPanelUSB = model.FrontPanelUSB;
+                caseEntity.MotherboardFormFactor = model.MotherboardFormFactor;
+                caseEntity.External52Bay = model.External52Bay;
+                caseEntity.External35Bay = model.External35Bay;
+                caseEntity.Internal35Bay = model.Internal35Bay;
+                caseEntity.Internal25Bay = model.Internal25Bay;
+                caseEntity.FullHeightExpansionSlots = model.FullHeightExpansionSlots;
+                caseEntity.HalfHeightExpansionSlots = model.HalfHeightExpansionSlots;
+                caseEntity.IsAvailable = model.IsAvailable;
 
+                return _db.SaveChanges() == 1;
+            }
+        }
+        // Delete by ID
+        public bool DeleteCase(int caseId)
+        {
+            using (_db)
+            {
+                var entity =
+                    _db
+                        .Cases
+                        .SingleOrDefault(e => e.Id == caseId);
+
+                _db.Cases.Remove(entity);
+
+                return _db.SaveChanges() == 1;
+            }
+        }
     }
 }
