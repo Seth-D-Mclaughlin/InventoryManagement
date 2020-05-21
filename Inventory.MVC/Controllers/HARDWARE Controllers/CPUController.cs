@@ -43,7 +43,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         }
 
         // GET : CPU/Details/{id}
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
             var service = new CPUService();
             var model = service.GetCpuById(id);
@@ -77,9 +77,8 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         // POST: CPU/Edit/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int? id, CPUEdit model)
+        public ActionResult Edit(int id, CPUEdit model)
         {
-            
 
             if (model.Id != id)
             {
@@ -99,12 +98,9 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             return View();
         }
         // GET : CPU/Delete/{id}
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+            
             var service = new CPUService();
             var model = service.GetCpuById(id);
 
@@ -117,7 +113,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         // POST : CPU/Delete/{id}
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
+        public ActionResult DeleteCPU(int id)
         {
             var service = new CPUService();
 

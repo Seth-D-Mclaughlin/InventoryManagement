@@ -54,6 +54,9 @@
     <Compile Include="CPUModels\CPUEdit.cs" />
     <Compile Include="CPUModels\CPUListItem.cs" />
     <Compile Include="MemeoryModels\MemoryCreate.cs" />
+    <Compile Include="MemeoryModels\MemoryDetail.cs" />
+    <Compile Include="MemeoryModels\MemoryEdit.cs" />
+    <Compile Include="MemeoryModels\MemoryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

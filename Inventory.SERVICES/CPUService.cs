@@ -55,28 +55,39 @@ namespace Inventory.SERVICES
         }
 
         // Get (Details by ID)
-        public CPUDetail GetCpuById(int? cpuId)
+        public CPUDetail GetCpuById(int cpuId)
         {
-            var cpuEntity = _db.CPUs.Find(cpuId);
-            var cpuDetail = new CPUDetail
+            using (var _db = new ApplicationDbContext())
             {
-                Id = cpuEntity.Id,
-                Name = cpuEntity.Name,
-                CoreCount = cpuEntity.CoreCount,
-                CoreClock = cpuEntity.CoreClock,
-                BoostClock = cpuEntity.BoostClock,
-                Socket = cpuEntity.Socket,
-                IsAvailable = cpuEntity.IsAvailable,
-                MicroArchitecture = cpuEntity.MicroArchitecture,
-                ThermalDesignPower = cpuEntity.ThermalDesignPower,
-                IntegratedGraphics = cpuEntity.IntegratedGraphics,
-                SimultaneousMultithreading = cpuEntity.SimultaneousMultithreading
-            };
-            return cpuDetail;
+
+                var cpuEntity =
+                    _db
+                    .CPUs
+                    .SingleOrDefault(e => e.Id == cpuId);
+                return
+                new CPUDetail
+                {
+                    Id = cpuEntity.Id,
+                    Name = cpuEntity.Name,
+                    Manufacturer = cpuEntity.Manufacturer,
+                    CoreCount = cpuEntity.CoreCount,
+                    CoreClock = cpuEntity.CoreClock,
+                    BoostClock = cpuEntity.BoostClock,
+                    Series = cpuEntity.Series,
+                    CoreFamily = cpuEntity.CoreFamily,
+                    Socket = cpuEntity.Socket,
+                    IsAvailable = cpuEntity.IsAvailable,
+                    MicroArchitecture = cpuEntity.MicroArchitecture,
+                    ThermalDesignPower = cpuEntity.ThermalDesignPower,
+                    IntegratedGraphics = cpuEntity.IntegratedGraphics,
+                    SimultaneousMultithreading = cpuEntity.SimultaneousMultithreading
+                };
+            }
+            
         }
         public bool UpdateCpu(CPUEdit model)
         {
-            using (_db)
+            using (var _db = new ApplicationDbContext())
             {
                 var cpuEntity =
                     _db
