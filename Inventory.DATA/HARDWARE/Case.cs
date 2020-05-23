@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.DATA
 {
@@ -24,7 +19,7 @@ namespace Inventory.DATA
 
         [Required]
         public string PowerSupply { get; set; }
-        
+
         [Required]
         public string Type { get; set; }
 
@@ -42,7 +37,7 @@ namespace Inventory.DATA
 
         [Required]
         public int External52Bay { get; set; }
-        
+
         [Required]
         public int External35Bay { get; set; }
 
@@ -52,10 +47,10 @@ namespace Inventory.DATA
         [Required]
         public int Internal25Bay { get; set; }
 
-        
+
         public int? FullHeightExpansionSlots { get; set; }
-        
-        
+
+
         public int? HalfHeightExpansionSlots { get; set; }
         [Required]
         public bool IsAvailable { get; set; }

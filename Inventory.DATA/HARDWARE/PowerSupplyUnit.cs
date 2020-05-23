@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.DATA
 {
-    public enum ModularType { full =1, semi, no}
+    public enum ModularType { full = 1, semi, no }
     public class PowerSupplyUnit
     {
         [Key]

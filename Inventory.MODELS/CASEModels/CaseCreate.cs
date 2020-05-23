@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.MODELS.CASEModels
 {
@@ -20,11 +15,11 @@ namespace Inventory.MODELS.CASEModels
         public string Color { get; set; }
 
         [Required]
-        [Display(Name="Power Supply")]
+        [Display(Name = "Power Supply")]
         public string PowerSupply { get; set; }
 
         [Required]
-        [Display(Name="Tower Size")]
+        [Display(Name = "Tower Size")]
         public string Type { get; set; }
 
         [Required]
@@ -67,16 +62,16 @@ namespace Inventory.MODELS.CASEModels
 
         public int Internal25Bay { get; set; }
 
-        
+
         [Display(Name = "Full Height for Expansion Slot")]
 
         public int? FullHeightExpansionSlots { get; set; }
 
-        
+
         [Display(Name = "Half Height for Expansion Slot")]
 
         public int? HalfHeightExpansionSlots { get; set; }
-        
+
         [Display(Name = "In use?")]
         public bool IsAvailable { get; set; }
     }

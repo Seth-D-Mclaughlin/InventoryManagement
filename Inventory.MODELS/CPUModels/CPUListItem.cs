@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.MODELS.CPUModels
 {
@@ -12,15 +7,15 @@ namespace Inventory.MODELS.CPUModels
         public int Id { get; set; }
         public string Name { get; set; }
 
-        
+
         [Display(Name = "Core Count")]
         public int CoreCount { get; set; }
 
-        
+
         [Display(Name = "Core Clock")]
         public float CoreClock { get; set; }
 
-        
+
         [Display(Name = "Core Boost Clock")]
         public float BoostClock { get; set; }
 

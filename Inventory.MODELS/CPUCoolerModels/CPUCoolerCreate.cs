@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.MODELS.CPUCoolerModels
 {
@@ -29,7 +24,7 @@ namespace Inventory.MODELS.CPUCoolerModels
         public string Socket { get; set; }
 
         [Required]
-        [Display(Name="Water Cooled")]
+        [Display(Name = "Water Cooled")]
         public bool WaterCooled { get; set; }
 
         [Required]

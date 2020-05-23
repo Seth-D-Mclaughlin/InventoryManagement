@@ -1,8 +1,8 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Inventory.DATA
 {
@@ -31,7 +31,7 @@ namespace Inventory.DATA
         public DbSet<Storage> Storages { get; set; }
         public DbSet<ExternalStorage> ExternalStorages { get; set; }
         public DbSet<InternalStorage> InternalStorages { get; set; }
-        
+
         public DbSet<Memory> Memories { get; set; }
         public DbSet<Motherboard> Motherboards { get; set; }
         public DbSet<OpticalDrive> OpticalDrives { get; set; }
@@ -42,6 +42,6 @@ namespace Inventory.DATA
             return new ApplicationDbContext();
         }
 
-        
+
     }
 }

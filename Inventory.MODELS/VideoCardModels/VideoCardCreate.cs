@@ -1,13 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Inventory.DATA
+namespace Inventory.MODELS.VideoCardModels
 {
-    public class VideoCard
+    public class VideoCardCreate
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
-
         [Required]
         public string Name { get; set; }
 
@@ -52,7 +48,6 @@ namespace Inventory.DATA
 
         [Required]
         public string Cooling { get; set; }
-
 
 
     }

@@ -1,10 +1,7 @@
 ﻿using Inventory.DATA;
 using Inventory.MODELS.CPUModels;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Inventory.SERVICES
 {
@@ -83,7 +80,7 @@ namespace Inventory.SERVICES
                     SimultaneousMultithreading = cpuEntity.SimultaneousMultithreading
                 };
             }
-            
+
         }
         public bool UpdateCpu(CPUEdit model)
         {

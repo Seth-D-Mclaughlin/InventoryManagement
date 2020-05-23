@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.MODELS.CASEModels
 {
@@ -11,17 +6,17 @@ namespace Inventory.MODELS.CASEModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        
+
         [Display(Name = "Tower Size")]
         public string Type { get; set; }
-        
-        [Display(Name="Case Color")]
+
+        [Display(Name = "Case Color")]
         public string Color { get; set; }
-        
-        [Display(Name="Motherboard Form Factor")]
+
+        [Display(Name = "Motherboard Form Factor")]
         public string MotherboardFormFactor { get; set; }
-        
-        [Display(Name="In use?")]
+
+        [Display(Name = "In use?")]
         public bool IsAvailable { get; set; }
     }
 }

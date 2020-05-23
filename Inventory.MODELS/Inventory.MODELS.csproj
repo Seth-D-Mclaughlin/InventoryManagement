@@ -58,6 +58,7 @@
     <Compile Include="MemeoryModels\MemoryEdit.cs" />
     <Compile Include="MemeoryModels\MemoryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoCardModels\VideoCardCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inventory.DATA\Inventory.DATA.csproj">

@@ -1,10 +1,6 @@
 ﻿using Inventory.DATA;
 using Inventory.MODELS.CASEModels;
 using Inventory.SERVICES;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Inventory.MVC.Controllers.HARDWARE_Controllers
@@ -75,57 +71,57 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             };
             return View(model);
         }
-    
 
-    // POST: Case/Edit/{id}
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public ActionResult Edit(int id, CaseEdit model)
-    {
 
-        if (model.Id != id)
+        // POST: Case/Edit/{id}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, CaseEdit model)
         {
-            ModelState.AddModelError("", "Id Mismatch");
+
+            if (model.Id != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = new CaseService();
+
+            if (service.UpdateCase(model))
+            {
+                TempData["SaveResult"] = "Your Case information was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your Case information could not be updated.");
+            return View();
+        }
+
+        // GET : Case/Delete/{id}
+        public ActionResult Delete(int id)
+        {
+
+            var service = new CaseService();
+            var model = service.GetCaseById(id);
+
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
             return View(model);
         }
 
-        var service = new CaseService();
-
-        if (service.UpdateCase(model))
+        // POST : Case/Delete/{id}
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCase(int id)
         {
-            TempData["SaveResult"] = "Your Case information was updated.";
+            var service = new CaseService();
+
+            service.DeleteCase(id);
+
+            TempData["SaveResult"] = "Your Case entry was deleted.";
             return RedirectToAction("Index");
         }
-
-        ModelState.AddModelError("", "Your Case information could not be updated.");
-        return View();
     }
-
-    // GET : Case/Delete/{id}
-    public ActionResult Delete(int id)
-    {
-
-        var service = new CaseService();
-        var model = service.GetCaseById(id);
-
-        if (model == null)
-        {
-            return HttpNotFound();
-        }
-        return View(model);
-    }
-
-    // POST : Case/Delete/{id}
-    [HttpPost, ActionName("Delete")]
-    [ValidateAntiForgeryToken]
-    public ActionResult DeleteCase(int id)
-    {
-        var service = new CaseService();
-
-        service.DeleteCase(id);
-
-        TempData["SaveResult"] = "Your Case entry was deleted.";
-        return RedirectToAction("Index");
-    }
-}
 }

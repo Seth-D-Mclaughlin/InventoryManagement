@@ -1,12 +1,7 @@
 ﻿using Inventory.DATA;
-using Inventory.SERVICES;
 using Inventory.MODELS.CPUModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using Inventory.SERVICES;
 using System.Web.Mvc;
-using System.Net;
 
 namespace Inventory.MVC.Controllers.HARDWARE_Controllers
 {
@@ -58,8 +53,8 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             var model = new CPUEdit
             {
                 Id = detail.Id,
-                Manufacturer=detail.Manufacturer,
-                Series=detail.Series,
+                Manufacturer = detail.Manufacturer,
+                Series = detail.Series,
                 CoreFamily = detail.CoreFamily,
                 Name = detail.Name,
                 CoreCount = detail.CoreCount,
@@ -101,7 +96,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         // GET : CPU/Delete/{id}
         public ActionResult Delete(int id)
         {
-            
+
             var service = new CPUService();
             var model = service.GetCpuById(id);
 

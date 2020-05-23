@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.MODELS.CPUModels
 {
@@ -17,7 +11,7 @@ namespace Inventory.MODELS.CPUModels
         public string Manufacturer { get; set; }
 
         [Required]
-        [Display(Name="Core Count")]
+        [Display(Name = "Core Count")]
         public int CoreCount { get; set; }
 
         [Required]
@@ -51,11 +45,11 @@ namespace Inventory.MODELS.CPUModels
         public bool SimultaneousMultithreading { get; set; }
 
         [Required]
-        [Display(Name="In use?")]
+        [Display(Name = "In use?")]
         public bool IsAvailable { get; set; }
 
         [Required]
-        [Display(Name ="Thermal Design Power")]
+        [Display(Name = "Thermal Design Power")]
         public int ThermalDesignPower { get; set; }
     }
 }

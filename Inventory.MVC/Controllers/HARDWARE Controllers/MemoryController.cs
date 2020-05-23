@@ -1,10 +1,6 @@
 ﻿using Inventory.DATA;
 using Inventory.MODELS.MemeoryModels;
 using Inventory.SERVICES;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Inventory.MVC.Controllers.HARDWARE_Controllers
@@ -113,8 +109,8 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         {
             var service = new MemoryService();
             service.DeleteMemory(id);
-                return View();
-            }
+            return View();
         }
     }
+}
 
