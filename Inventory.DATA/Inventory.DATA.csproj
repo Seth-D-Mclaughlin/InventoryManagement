@@ -68,6 +68,10 @@
     <Compile Include="Migrations\202005192014535_InitialMigration.Designer.cs">
       <DependentUpon>202005192014535_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005231958455_updatedatalayer.cs" />
+    <Compile Include="Migrations\202005231958455_updatedatalayer.Designer.cs">
+      <DependentUpon>202005231958455_updatedatalayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HARDWARE\Storage.cs" />
@@ -80,6 +84,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005192014535_InitialMigration.resx">
       <DependentUpon>202005192014535_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005231958455_updatedatalayer.resx">
+      <DependentUpon>202005231958455_updatedatalayer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

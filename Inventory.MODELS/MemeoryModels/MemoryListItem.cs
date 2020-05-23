@@ -16,7 +16,7 @@ namespace Inventory.MODELS.MemeoryModels
         public string Speed { get; set; }
 
         [Required]
-        [Display(Name = "In use?")]
+        [Display(Name = "In use")]
         public bool IsAvailable { get; set; }
     }
 }

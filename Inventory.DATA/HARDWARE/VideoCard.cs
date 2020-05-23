@@ -12,6 +12,9 @@ namespace Inventory.DATA
         public string Name { get; set; }
 
         [Required]
+        public string Manufacturer { get; set; }
+
+        [Required]
         public string Chipset { get; set; }
 
         [Required]
@@ -53,7 +56,8 @@ namespace Inventory.DATA
         [Required]
         public string Cooling { get; set; }
 
-
+        [Required]
+        public bool IsAvailable { get; set; }
 
     }
 }

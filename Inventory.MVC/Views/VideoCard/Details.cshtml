@@ -1,0 +1,154 @@
+﻿@model Inventory.MODELS.VideoCardModels.VideoCardDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VideoCardDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chipset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chipset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemoryType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemoryType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoreClock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoreClock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoostClock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoostClock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SLICrossfire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SLICrossfire)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrameSync)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrameSync)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThermalDesignPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThermalDesignPower)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DVIPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DVIPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HDMIPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HDMIPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiniHDMIPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiniHDMIPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisplayPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisplayPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpansionSlotWidth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpansionSlotWidth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cooling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cooling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn-sm btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index", new { }, htmlAttributes: new { @class = "btn-sm btn-info" })
+</p>

@@ -1,12 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Inventory.MODELS.VideoCardModels
 {
-    public class VideoCardCreate
+    public class VideoCardEdit
     {
         [Required]
+        public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
-        
+
         [Required]
         public string Manufacturer { get; set; }
 
@@ -14,7 +21,7 @@ namespace Inventory.MODELS.VideoCardModels
         public string Chipset { get; set; }
 
         [Required]
-        [Display(Name ="Memory Type")]
+        [Display(Name = "Memory Type")]
         public string MemoryType { get; set; }
 
         [Required]
