@@ -1,14 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Inventory.DATA;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Inventory.DATA
+namespace Inventory.MODELS.PSUModels
 {
-    public enum ModularType { full = 1, semi, no }
-    public class PowerSupplyUnit
+    public class PSUEdit
     {
-        [Key]
         [Required]
         public int Id { get; set; }
-
         [Required]
         public string Name { get; set; }
 
@@ -16,9 +19,11 @@ namespace Inventory.DATA
         public string Manufacturer { get; set; }
 
         [Required]
+        [Display(Name = "Effeciency Rating")]
         public string EffeciencyRating { get; set; }
 
         [Required]
+        [Display(Name = "Type of Modular")]
         public ModularType TypeOfModular { get; set; }
 
         [Required]
@@ -31,6 +36,7 @@ namespace Inventory.DATA
         public bool Fanless { get; set; }
 
         [Required]
+        [Display(Name = "ATX Connectors")]
         public string ATXConnectors { get; set; }
 
         [Required]

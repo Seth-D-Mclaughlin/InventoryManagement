@@ -103,13 +103,15 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         }
 
         // POST: Memory/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteMemory(int id)
         {
             var service = new MemoryService();
             service.DeleteMemory(id);
-            return View();
+            TempData["SaveResult"] = "Your Memory entry was deleted.";
+
+            return RedirectToAction("Index");
         }
     }
 }

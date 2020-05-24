@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HARDWARE Controllers\CaseController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\CPUController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\MemoryController.cs" />
+    <Compile Include="Controllers\HARDWARE Controllers\PSUController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\VideoCardController.cs" />
@@ -265,6 +266,11 @@
     <Content Include="Views\VideoCard\Edit.cshtml" />
     <Content Include="Views\VideoCard\Details.cshtml" />
     <Content Include="Views\VideoCard\Delete.cshtml" />
+    <Content Include="Views\PSU\Index.cshtml" />
+    <Content Include="Views\PSU\Details.cshtml" />
+    <Content Include="Views\PSU\Edit.cshtml" />
+    <Content Include="Views\PSU\Delete.cshtml" />
+    <Content Include="Views\PSU\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
