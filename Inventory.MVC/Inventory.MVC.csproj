@@ -171,6 +171,7 @@
     <Compile Include="Controllers\HARDWARE Controllers\CaseController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\CPUController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\MemoryController.cs" />
+    <Compile Include="Controllers\HARDWARE Controllers\MOBAController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\PSUController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -274,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\MOBA\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
