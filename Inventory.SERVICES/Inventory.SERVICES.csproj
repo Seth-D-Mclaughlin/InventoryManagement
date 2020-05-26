@@ -59,6 +59,7 @@
     <Compile Include="CPUService.cs" />
     <Compile Include="MemoryService.cs" />
     <Compile Include="MOBAService.cs" />
+    <Compile Include="ODService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PSUService.cs" />
     <Compile Include="VideoCardService.cs" />

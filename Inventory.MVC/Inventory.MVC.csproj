@@ -272,10 +272,14 @@
     <Content Include="Views\PSU\Edit.cshtml" />
     <Content Include="Views\PSU\Delete.cshtml" />
     <Content Include="Views\PSU\Create.cshtml" />
+    <Content Include="Views\MOBA\Index.cshtml" />
+    <Content Include="Views\MOBA\Create.cshtml" />
+    <Content Include="Views\MOBA\Details.cshtml" />
+    <Content Include="Views\MOBA\Delete.cshtml" />
+    <Content Include="Views\MOBA\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\MOBA\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

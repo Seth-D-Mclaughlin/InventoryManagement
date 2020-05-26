@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Inventory.MODELS.MotherboardModels;
+using Inventory.SERVICES;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,13 +13,17 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         // GET: MOBA
         public ActionResult Index()
         {
-            return View();
+            var service = new MOBAService();
+            var mobaList = service.GetAllMOBAs();
+            return View(mobaList);
         }
 
         // GET: MOBA/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var service = new MOBAService();
+            var model = service.GetMOBAById(id);
+            return View(model);
         }
 
         // GET: MOBA/Create
@@ -28,62 +34,95 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
 
         // POST: MOBA/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(MOBACreate moba)
         {
-            try
+            var service = new MOBAService();
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                service.CreateMOBA(moba);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(moba);
         }
 
         // GET: MOBA/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
-        }
-
+            var service = new MOBAService();
+            var detail = service.GetMOBAById(id);
+            var model = new MOBAEdit
+            {
+                Id = detail.Id,
+                Name = detail.Name,
+                Manufacturer = detail.Manufacturer,
+                Socket = detail.Socket,
+                FormFactor = detail.FormFactor,
+                MemoryMax = detail.MemoryMax,
+                MemorySlots = detail.MemorySlots,
+                Color = detail.Color,
+                Chipset = detail.Chipset,
+                PCIEX16Slots = detail.PCIEX16Slots,
+                PCIEX8Slots = detail.PCIEX8Slots,
+                PCIEX4Slots = detail.PCIEX4Slots,
+                PCISlots = detail.PCISlots,
+                EthernetPorts = detail.EthernetPorts,
+                M2Slots = detail.M2Slots,
+                Sata3GBsPorts = detail.Sata3GBsPorts,
+                Sata6GBsPorts = detail.Sata6GBsPorts,
+                SataExpressPorts = detail.MSataSlots,
+                OnboardVideo = detail.OnboardVideo,
+                OnboardUSB3Headers = detail.OnboardUSB3Headers,
+                WifiNetworking = detail.WifiNetworking,
+                IsAvailable = detail.IsAvailable,
+            };
+            return View(model);
+            }
         // POST: MOBA/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, MOBAEdit model)
         {
-            try
+            if (model.Id != id)
             {
-                // TODO: Add update logic here
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
 
+            var service = new MOBAService();
+
+            if (service.UpdateMOBA(model))
+            {
+                TempData["SaveResult"] = "Your Motherboard information was updated.";
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            ModelState.AddModelError("", "Your Motherboard information could not be updated.");
+            return View();
         }
 
         // GET: MOBA/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var service = new MOBAService();
+            var model = service.GetMOBAById(id);
+
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
+            return View(model);
         }
 
         // POST: MOBA/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteMOBA(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            var service = new MOBAService();
+            service.DeleteMOBA(id);
+            TempData["SaveResult"] = "Your Motherboard entry was deleted.";
+            return RedirectToAction("Index");
         }
     }
 }

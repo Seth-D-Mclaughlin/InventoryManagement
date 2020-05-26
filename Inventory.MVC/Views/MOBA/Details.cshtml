@@ -1,0 +1,194 @@
+﻿@model Inventory.MODELS.MotherboardModels.MOBADetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MOBADetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Socket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Socket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemoryMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemoryMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemorySlots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MemorySlots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chipset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chipset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PCIEX16Slots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PCIEX16Slots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PCIEX8Slots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PCIEX8Slots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PCIEX4Slots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PCIEX4Slots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PCISlots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PCISlots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EthernetPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EthernetPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.M2Slots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.M2Slots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sata3GBsPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sata3GBsPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sata6GBsPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sata6GBsPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SataExpressPorts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SataExpressPorts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MSataSlots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MSataSlots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnboardVideo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnboardVideo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnboardUSB3Headers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnboardUSB3Headers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WifiNetworking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WifiNetworking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAvailable)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn-xs btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index", new { }, htmlAttributes: new { @class = "btn-xs btn-secondary" })
+</p>

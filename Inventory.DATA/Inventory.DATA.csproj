@@ -76,6 +76,10 @@
     <Compile Include="Migrations\202005242122079_may25.Designer.cs">
       <DependentUpon>202005242122079_may25.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005261602491_may26.cs" />
+    <Compile Include="Migrations\202005261602491_may26.Designer.cs">
+      <DependentUpon>202005261602491_may26.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HARDWARE\Storage.cs" />
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005242122079_may25.resx">
       <DependentUpon>202005242122079_may25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005261602491_may26.resx">
+      <DependentUpon>202005261602491_may26.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

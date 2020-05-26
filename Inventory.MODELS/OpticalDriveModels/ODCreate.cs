@@ -1,13 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Inventory.DATA
+namespace Inventory.MODELS.OpticalDriveModels
 {
-    public class OpticalDrive
+    public class ODCreate
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
-
         [Required]
         public string Name { get; set; }
 
@@ -15,6 +17,7 @@ namespace Inventory.DATA
         public string Manufacturer { get; set; }
 
         [Required]
+        [Display(Name = "Form Factor")]
         public string FormFactor { get; set; }
 
         [Required]
@@ -27,10 +30,11 @@ namespace Inventory.DATA
         public string Color { get; set; }
 
         [Required]
+        [Display(Name = "Buffer Cache")]
         public int BufferCache { get; set; }
-
+        
         [Required]
+        [Display(Name = "In use?")]
         public bool IsAvailable { get; set; }
-
     }
 }
