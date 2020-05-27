@@ -176,6 +176,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\VideoCardController.cs" />
+    <Compile Include="Controllers\HARDWARE Controllers\ODController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -277,6 +278,11 @@
     <Content Include="Views\MOBA\Details.cshtml" />
     <Content Include="Views\MOBA\Delete.cshtml" />
     <Content Include="Views\MOBA\Edit.cshtml" />
+    <Content Include="Views\OD\Index.cshtml" />
+    <Content Include="Views\OD\Details.cshtml" />
+    <Content Include="Views\OD\Create.cshtml" />
+    <Content Include="Views\OD\Edit.cshtml" />
+    <Content Include="Views\OD\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
