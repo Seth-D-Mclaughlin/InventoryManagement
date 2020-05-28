@@ -168,15 +168,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExternalController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\CaseController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\CPUController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\MemoryController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\MOBAController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\PSUController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InternalController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\HARDWARE Controllers\VideoCardController.cs" />
-    <Compile Include="Controllers\HARDWARE Controllers\ODController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -202,6 +203,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\SethsComputerInventory - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -278,11 +280,16 @@
     <Content Include="Views\MOBA\Details.cshtml" />
     <Content Include="Views\MOBA\Delete.cshtml" />
     <Content Include="Views\MOBA\Edit.cshtml" />
-    <Content Include="Views\OD\Index.cshtml" />
-    <Content Include="Views\OD\Details.cshtml" />
-    <Content Include="Views\OD\Create.cshtml" />
-    <Content Include="Views\OD\Edit.cshtml" />
-    <Content Include="Views\OD\Delete.cshtml" />
+    <Content Include="Views\External\Index.cshtml" />
+    <Content Include="Views\External\Details.cshtml" />
+    <Content Include="Views\External\Create.cshtml" />
+    <Content Include="Views\External\Edit.cshtml" />
+    <Content Include="Views\External\Delete.cshtml" />
+    <Content Include="Views\Internal\Index.cshtml" />
+    <Content Include="Views\Internal\Details.cshtml" />
+    <Content Include="Views\Internal\Create.cshtml" />
+    <Content Include="Views\Internal\Edit.cshtml" />
+    <Content Include="Views\Internal\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

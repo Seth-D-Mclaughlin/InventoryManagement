@@ -34,7 +34,6 @@ namespace Inventory.DATA
 
         public DbSet<Memory> Memories { get; set; }
         public DbSet<Motherboard> Motherboards { get; set; }
-        public DbSet<OpticalDrive> OpticalDrives { get; set; }
         public DbSet<VideoCard> VideoCards { get; set; }
 
         public static ApplicationDbContext Create()

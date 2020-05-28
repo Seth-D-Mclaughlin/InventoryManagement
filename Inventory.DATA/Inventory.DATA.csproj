@@ -61,7 +61,6 @@
     <Compile Include="HARDWARE\InternalStorage.cs" />
     <Compile Include="HARDWARE\Memory.cs" />
     <Compile Include="HARDWARE\Motherboard.cs" />
-    <Compile Include="HARDWARE\OpticalDrive.cs" />
     <Compile Include="HARDWARE\PowerSupplyUnit.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202005192014535_InitialMigration.cs" />
@@ -79,6 +78,10 @@
     <Compile Include="Migrations\202005261602491_may26.cs" />
     <Compile Include="Migrations\202005261602491_may26.Designer.cs">
       <DependentUpon>202005261602491_may26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005281920211_may28.cs" />
+    <Compile Include="Migrations\202005281920211_may28.Designer.cs">
+      <DependentUpon>202005281920211_may28.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005261602491_may26.resx">
       <DependentUpon>202005261602491_may26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281920211_may28.resx">
+      <DependentUpon>202005281920211_may28.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿@model Inventory.MODELS.OpticalDriveModels.ODDetail
+﻿@model Inventory.MODELS.ExternalStorageModels.ExternalDetail
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>ODDetail</h4>
+    <h4>ExternalDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -27,11 +27,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FormFactor)
+            @Html.DisplayNameFor(model => model.IsAvailable)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FormFactor)
+            @Html.DisplayFor(model => model.IsAvailable)
         </dd>
 
         <dt>
@@ -43,11 +43,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Capability)
+            @Html.DisplayNameFor(model => model.Capacity)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Capability)
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
         </dd>
 
         <dt>
@@ -59,19 +67,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.BufferCache)
+            @Html.DisplayNameFor(model => model.IsPortiable)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.BufferCache)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.IsAvailable)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IsAvailable)
+            @Html.DisplayFor(model => model.IsPortiable)
         </dd>
 
     </dl>

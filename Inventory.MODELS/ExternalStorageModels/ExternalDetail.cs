@@ -5,29 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inventory.MODELS.OpticalDriveModels
+namespace Inventory.MODELS.ExternalStorageModels
 {
-    public class ODListItem
+    public class ExternalDetail
     {
-        [Required]
         public int Id { get; set; }
         public string Name { get; set; }
-        [Required]
 
         public string Manufacturer { get; set; }
 
-
-        [Required]
+        [Display(Name = "In use?")]
+        public bool IsAvailable { get; set; }
 
         public string Interface { get; set; }
-        [Required]
 
-        public string Capability { get; set; }
-        [Required]
+        public int Capacity { get; set; }
 
+        public string Type { get; set; }
         public string Color { get; set; }
-        [Required]
-        [Display(Name="In use?")]
-        public bool IsAvailable { get; set; }
+
+        [Display(Name = "Portiable")]
+        public bool IsPortiable { get; set; }
     }
 }
