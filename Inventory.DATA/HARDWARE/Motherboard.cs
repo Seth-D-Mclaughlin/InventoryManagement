@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.DATA
 {
@@ -74,5 +75,6 @@ namespace Inventory.DATA
         [Required]
         public bool IsAvailable { get; set; }
 
+        public List<Project> Projects { get; set; }
     }
 }

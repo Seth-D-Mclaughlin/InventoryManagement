@@ -34,7 +34,6 @@ namespace Inventory.DATA
         public string ATXConnectors { get; set; }
 
         [Required]
-        [Display(Name = "In use?")]
         public bool IsAvailable { get; set; }
     }
 }

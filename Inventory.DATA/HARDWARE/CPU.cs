@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.DATA
 {
@@ -47,5 +48,6 @@ namespace Inventory.DATA
         [Required]
         public int ThermalDesignPower { get; set; }
 
+        public List<Project> Projects { get; set; }
     }
 }

@@ -84,6 +84,7 @@
       <DependentUpon>202005281920211_may28.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HARDWARE\Storage.cs" />
     <Compile Include="HARDWARE\VideoCard.cs" />

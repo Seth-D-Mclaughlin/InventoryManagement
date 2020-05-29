@@ -69,6 +69,7 @@
     <Compile Include="MotherboardModels\MOBADetail.cs" />
     <Compile Include="MotherboardModels\MOBAEdit.cs" />
     <Compile Include="MotherboardModels\MOBAListItem.cs" />
+    <Compile Include="ProjectModels\ProjectCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PSUModels\PSUCreate.cs" />
     <Compile Include="PSUModels\PSUDetail.cs" />
