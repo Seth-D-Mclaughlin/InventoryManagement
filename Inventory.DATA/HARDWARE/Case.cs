@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Inventory.DATA
 {
@@ -7,7 +8,7 @@ namespace Inventory.DATA
     {
         [Key]
         [Required]
-        public int Id { get; set; }
+        public int CaseId { get; set; }
 
         [Required]
         public string Name { get; set; }
@@ -56,6 +57,8 @@ namespace Inventory.DATA
         [Required]
         public bool IsAvailable { get; set; }
 
-        public List<Project> Projects { get; set; }
+        public int? ProjectId { get; set; }
+        [ForeignKey(nameof(ProjectId))]
+        public virtual Project Project { get; set; }
     }
 }

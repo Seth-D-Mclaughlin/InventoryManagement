@@ -6,7 +6,6 @@ namespace Inventory.DATA
     {
         public string FormFactor { get; set; }
         public bool NVME { get; set; }
-        public virtual List<Project> Projects { get; set; }
 
     }
 }

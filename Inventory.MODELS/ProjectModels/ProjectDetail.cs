@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Inventory.MODELS.ProjectModels
 {
-    public class ProjectCreate
+    public class ProjectDetail
     {
         [Required]
         public string Name { get; set; }
@@ -18,7 +16,6 @@ namespace Inventory.MODELS.ProjectModels
 
 
         public int CpuId { get; set; }
-        public string CpuName { get; set; }
         public int MemId { get; set; }
         public int CaseId { get; set; }
         public int CpuCoolId { get; set; }

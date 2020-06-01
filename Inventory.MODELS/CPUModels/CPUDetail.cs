@@ -4,7 +4,7 @@ namespace Inventory.MODELS.CPUModels
 {
     public class CPUDetail
     {
-        public int Id { get; set; }
+        public int CpuId { get; set; }
         public string Name { get; set; }
 
         public string Manufacturer { get; set; }
