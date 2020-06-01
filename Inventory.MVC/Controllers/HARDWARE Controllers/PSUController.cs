@@ -57,7 +57,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             var detail = service.GetPSUById(id);
             var model = new PSUEdit
             {
-                Id = detail.Id,
+                PsuId = detail.PsuId,
                 Name = detail.Name,
                 Manufacturer = detail.Manufacturer,
                 Type = detail.Type,
@@ -76,7 +76,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, PSUEdit model)
         {
-            if (model.Id != id)
+            if (model.PsuId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

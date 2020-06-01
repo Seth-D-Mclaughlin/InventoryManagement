@@ -41,7 +41,7 @@ namespace Inventory.SERVICES
             var caseEntities = _db.Cases.ToList();
             var caseList = caseEntities.Select(c => new CaseListItem
             {
-                Id = c.Id,
+                CaseId = c.CaseId,
                 Name = c.Name,
                 Type = c.Type,
                 Color = c.Color,
@@ -64,7 +64,7 @@ namespace Inventory.SERVICES
                 return
                 new CaseDetail
                 {
-                    Id = caseEntity.Id,
+                    CaseId = caseEntity.CaseId,
                     Name = caseEntity.Name,
                     Manufacturer = caseEntity.Manufacturer,
                     Color = caseEntity.Color,
@@ -91,7 +91,7 @@ namespace Inventory.SERVICES
                 var caseEntity =
                     _db
                     .Cases
-                    .SingleOrDefault(e => e.Id == model.Id);
+                    .SingleOrDefault(e => e.CaseId == model.CaseId);
                 caseEntity.Name = model.Name;
                 caseEntity.Manufacturer = model.Manufacturer;
                 caseEntity.Color = model.Color;
@@ -120,7 +120,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .Cases
-                        .SingleOrDefault(e => e.Id == caseId);
+                        .SingleOrDefault(e => e.CaseId == caseId);
 
                 _db.Cases.Remove(entity);
 

@@ -58,7 +58,7 @@ namespace Inventory.MVC.Controllers
             var detail = service.GetVideoCardById(id);
             var model = new VideoCardEdit
             {
-                Id = detail.Id,
+                VideoId = detail.VideoId,
                 Name = detail.Name,
                 Manufacturer = detail.Manufacturer,
                 Chipset = detail.Chipset,
@@ -85,7 +85,7 @@ namespace Inventory.MVC.Controllers
         [HttpPost]
         public ActionResult Edit(int id, VideoCardEdit model)
         {
-            if (model.Id != id)
+            if (model.VideoId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

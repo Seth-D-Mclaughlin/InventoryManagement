@@ -4,7 +4,7 @@ namespace Inventory.MODELS.CASEModels
 {
     public class CaseListItem
     {
-        public int Id { get; set; }
+        public int CaseId { get; set; }
         public string Name { get; set; }
 
         [Display(Name = "Tower Size")]

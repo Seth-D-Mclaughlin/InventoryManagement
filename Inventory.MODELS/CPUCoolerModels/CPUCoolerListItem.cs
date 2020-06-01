@@ -4,7 +4,7 @@ namespace Inventory.MODELS.CPUCoolerModels
 {
     public class CPUCoolerListItem
     {
-        public int Id { get; set; }
+        public int CoolerId { get; set; }
         public string Name { get; set; }
 
         public string Type { get; set; }

@@ -10,7 +10,7 @@ namespace Inventory.MODELS.VideoCardModels
     public class VideoCardListItem
     {
         [Required]
-        public int Id { get; set; }
+        public int VideoId { get; set; }
         [Required]
         public string Name { get; set; }
 

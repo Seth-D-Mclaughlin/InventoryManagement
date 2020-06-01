@@ -53,7 +53,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             var detail = service.GetMemoryById(id);
             var model = new MemoryEdit
             {
-                Id = detail.Id,
+                MemoryId = detail.Id,
                 Name = detail.Name,
                 Manufacturer = detail.Manufacturer,
                 Speed = detail.Speed,
@@ -73,7 +73,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, MemoryEdit model)
         {
-            if (model.Id != id)
+            if (model.MemoryId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

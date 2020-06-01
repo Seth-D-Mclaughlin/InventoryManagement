@@ -1,5 +1,6 @@
 ﻿
 
+using Inventory.DATA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,7 +13,7 @@ namespace Inventory.MODELS.ProjectModels
     public class ProjectEdit
     {
         [Required]
-        public int Id { get; set; }
+        public int ProjectId { get; set; }
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }
@@ -20,12 +21,24 @@ namespace Inventory.MODELS.ProjectModels
 
 
         public int CpuId { get; set; }
-        public int MemId { get; set; }
+        public virtual CPU CPU { get; set; }
+
+        public int MemoryId { get; set; }
+        public virtual Memory Memory { get; set; }
+
         public int CaseId { get; set; }
-        public int CpuCoolId { get; set; }
-        public int VideoCardId { get; set; }
+        public virtual Case Case { get; set; }
+
+        public int CoolerId { get; set; }
+        public virtual CPUCooler CPUCooler { get; set; }
+
+        public int VideoId { get; set; }
+        public virtual VideoCard VideoCard { get; set; }
+
         public int MotherboardId { get; set; }
-        public int PSUId { get; set; }
-        public int InternalId { get; set; }
+        public virtual Motherboard Motherboard { get; set; }
+
+        public int PsuId { get; set; }
+        public virtual PowerSupplyUnit PowerSupplyUnit { get; set; }
     }
 }

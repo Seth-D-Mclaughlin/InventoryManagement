@@ -8,7 +8,7 @@ namespace Inventory.MODELS.MotherboardModels
 {
     public class MOBADetail
     {
-        public int Id { get; set; }
+        public int MotherboardId { get; set; }
 
         public string Name { get; set; }
 

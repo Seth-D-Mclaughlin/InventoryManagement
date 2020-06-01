@@ -50,7 +50,7 @@ namespace Inventory.SERVICES
             var MOBAEntities = _db.Motherboards.ToList();
             var MOBAList = MOBAEntities.Select(c => new MOBAListItem
             {
-                Id = c.Id,
+                MotherboardId = c.MotherboardId,
                 Name = c.Name,
                 Manufacturer = c.Manufacturer,
                 Socket = c.Socket,
@@ -70,11 +70,11 @@ namespace Inventory.SERVICES
                 var MOBAEntity =
                     _db
                     .Motherboards
-                    .SingleOrDefault(e => e.Id == MOBAId);
+                    .SingleOrDefault(e => e.MotherboardId == MOBAId);
                 return
                 new MOBADetail
                 {
-                    Id = MOBAEntity.Id,
+                    MotherboardId = MOBAEntity.MotherboardId,
                     Name = MOBAEntity.Name,
                     Manufacturer = MOBAEntity.Manufacturer,
                     Color = MOBAEntity.Color,
@@ -107,7 +107,7 @@ namespace Inventory.SERVICES
                 var MOBAEntity =
                     _db
                     .Motherboards
-                    .SingleOrDefault(e => e.Id == model.Id);
+                    .SingleOrDefault(e => e.MotherboardId == model.MotherboardId);
                 MOBAEntity.Name = model.Name;
                 MOBAEntity.Manufacturer = model.Manufacturer;
                 MOBAEntity.Color = model.Color;
@@ -142,7 +142,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .Motherboards
-                        .SingleOrDefault(e => e.Id == MOBAId);
+                        .SingleOrDefault(e => e.MotherboardId == MOBAId);
 
                 _db.Motherboards.Remove(entity);
 

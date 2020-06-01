@@ -5,7 +5,7 @@ namespace Inventory.MODELS.CASEModels
     public class CaseEdit
     {
         [Required]
-        public int Id { get; set; }
+        public int CaseId { get; set; }
 
         [Required]
         public string Name { get; set; }

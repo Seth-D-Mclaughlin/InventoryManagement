@@ -4,7 +4,7 @@ namespace Inventory.MODELS.MemeoryModels
 {
     public class MemoryDetail
     {
-        public int Id { get; set; }
+        public int MemoryId { get; set; }
         public string Name { get; set; }
 
 

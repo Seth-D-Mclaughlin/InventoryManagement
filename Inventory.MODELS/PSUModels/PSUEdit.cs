@@ -11,7 +11,7 @@ namespace Inventory.MODELS.PSUModels
     public class PSUEdit
     {
         [Required]
-        public int Id { get; set; }
+        public int PsuId { get; set; }
         [Required]
         public string Name { get; set; }
 

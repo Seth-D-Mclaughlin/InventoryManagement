@@ -53,7 +53,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             var detail = service.GetMOBAById(id);
             var model = new MOBAEdit
             {
-                Id = detail.Id,
+                MotherboardId = detail.MotherboardId,
                 Name = detail.Name,
                 Manufacturer = detail.Manufacturer,
                 Socket = detail.Socket,
@@ -83,7 +83,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, MOBAEdit model)
         {
-            if (model.Id != id)
+            if (model.MotherboardId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

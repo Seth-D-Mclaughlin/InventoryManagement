@@ -79,7 +79,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         public ActionResult Edit(int id, CaseEdit model)
         {
 
-            if (model.Id != id)
+            if (model.CaseId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

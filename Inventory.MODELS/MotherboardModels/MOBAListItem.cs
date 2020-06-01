@@ -10,7 +10,7 @@ namespace Inventory.MODELS.MotherboardModels
     public class MOBAListItem
     {
         [Required]
-        public int Id { get; set; }
+        public int MotherboardId { get; set; }
         [Required]
         public string Name { get; set; }
 

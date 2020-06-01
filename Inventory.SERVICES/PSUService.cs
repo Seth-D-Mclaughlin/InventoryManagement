@@ -38,7 +38,7 @@ namespace Inventory.SERVICES
             var PSUEntites = _db.PowerSupplyUnits.ToList();
             var PSUList = PSUEntites.Select(m => new PSUListItem
             {
-                Id = m.Id,
+                PsuId = m.PsuId,
                 Name = m.Name,
                 Manufacturer = m.Manufacturer,
                 Type = m.Type,
@@ -57,11 +57,11 @@ namespace Inventory.SERVICES
                 var PSUEntity =
                     _db
                     .PowerSupplyUnits
-                    .SingleOrDefault(e => e.Id == psuId);
+                    .SingleOrDefault(e => e.PsuId == psuId);
                 return
                     new PSUDetail
                     {
-                        Id = PSUEntity.Id,
+                        PsuId = PSUEntity.PsuId,
                         Name = PSUEntity.Name,
                         Manufacturer = PSUEntity.Manufacturer,
                         Type = PSUEntity.Type,
@@ -82,7 +82,7 @@ namespace Inventory.SERVICES
                 var PSUEntity =
                     _db
                     .PowerSupplyUnits
-                    .SingleOrDefault(e => e.Id == model.Id);
+                    .SingleOrDefault(e => e.PsuId == model.PsuId);
                 PSUEntity.Name = model.Name;
                 PSUEntity.Manufacturer = model.Manufacturer;
                 PSUEntity.Type = model.Type;
@@ -105,7 +105,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .PowerSupplyUnits
-                        .SingleOrDefault(e => e.Id == psuId);
+                        .SingleOrDefault(e => e.PsuId == psuId);
 
                 _db.PowerSupplyUnits.Remove(entity);
 

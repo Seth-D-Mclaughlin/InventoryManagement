@@ -45,7 +45,7 @@ namespace Inventory.SERVICES
             var VideoCardEntites = _db.VideoCards.ToList();
             var VideoCardList = VideoCardEntites.Select(m => new VideoCardListItem
             {
-                Id = m.Id,
+                VideoId = m.VideoId,
                 Name = m.Name,
                 Manufacturer = m.Manufacturer,
                 CoreClock = m.CoreClock,
@@ -63,11 +63,11 @@ namespace Inventory.SERVICES
                 var VideoCardEntity =
                     _db
                     .VideoCards
-                    .SingleOrDefault(e => e.Id == vidId);
+                    .SingleOrDefault(e => e.VideoId == vidId);
                 return
                     new VideoCardDetail
                     {
-                        Id = VideoCardEntity.Id,
+                        VideoId = VideoCardEntity.VideoId,
                         Name = VideoCardEntity.Name,
                         Manufacturer = VideoCardEntity.Manufacturer,
                         Chipset = VideoCardEntity.Chipset,
@@ -96,7 +96,7 @@ namespace Inventory.SERVICES
                 var vidEntity =
                     _db
                     .VideoCards
-                    .SingleOrDefault(e => e.Id == model.Id);
+                    .SingleOrDefault(e => e.VideoId == model.VideoId);
                 vidEntity.Name = model.Name;
                 vidEntity.Manufacturer = model.Manufacturer;
                 vidEntity.Chipset = model.Chipset;
@@ -127,7 +127,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .VideoCards
-                        .SingleOrDefault(e => e.Id == vidId);
+                        .SingleOrDefault(e => e.VideoId == vidId);
 
                 _db.VideoCards.Remove(entity);
 

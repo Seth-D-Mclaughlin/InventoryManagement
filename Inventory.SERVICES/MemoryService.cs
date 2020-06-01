@@ -36,7 +36,7 @@ namespace Inventory.SERVICES
             var memoryEntites = _db.Memories.ToList();
             var memoryList = memoryEntites.Select(m => new MemoryListItem
             {
-                Id = m.Id,
+                MemoryId = m.MemoryId,
                 Name = m.Name,
                 Manufacturer = m.Manufacturer,
                 Speed = m.Speed,
@@ -45,7 +45,7 @@ namespace Inventory.SERVICES
             return memoryList;
         }
 
-        // Get (Details by ID)
+        // Get (Details by MemoryId)
         public MemoryDetail GetMemoryById(int? memId)
         {
             using (var _db = new ApplicationDbContext())
@@ -54,11 +54,11 @@ namespace Inventory.SERVICES
                 var memoryEntity =
                     _db
                     .Memories
-                    .SingleOrDefault(e => e.Id == memId);
+                    .SingleOrDefault(e => e.MemoryId == memId);
                 return
                     new MemoryDetail
                     {
-                        Id = memoryEntity.Id,
+                        MemoryId = memoryEntity.MemoryId,
                         Name = memoryEntity.Name,
                         Manufacturer = memoryEntity.Manufacturer,
                         Speed = memoryEntity.Speed,
@@ -80,7 +80,7 @@ namespace Inventory.SERVICES
                 var memEntity =
                     _db
                     .Memories
-                    .SingleOrDefault(e => e.Id == model.Id);
+                    .SingleOrDefault(e => e.MemoryId == model.MemoryId);
                 memEntity.Name = model.Name;
                 memEntity.Manufacturer = model.Manufacturer;
                 memEntity.Speed = model.Speed;
@@ -104,7 +104,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .Memories
-                        .SingleOrDefault(e => e.Id == memId);
+                        .SingleOrDefault(e => e.MemoryId == memId);
 
                 _db.Memories.Remove(entity);
 

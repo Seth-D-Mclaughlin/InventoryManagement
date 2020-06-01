@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Inventory.DATA;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Inventory.MODELS.ProjectModels
     {
         [Required]
         public string Name { get; set; }
-        public string Description { get; set; }
         public string Notes { get; set; }
+
     }
 }

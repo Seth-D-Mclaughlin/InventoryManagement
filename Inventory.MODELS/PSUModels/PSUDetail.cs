@@ -10,7 +10,7 @@ namespace Inventory.MODELS.PSUModels
 {
     public class PSUDetail
     {
-        public int Id { get; set; }
+        public int PsuId { get; set; }
 
         
         public string Name { get; set; }

@@ -40,7 +40,7 @@ namespace Inventory.SERVICES
             var cpuEntities = _db.CPUs.ToList();
             var cpuList = cpuEntities.Select(c => new CPUListItem
             {
-                Id = c.Id,
+                CpuId = c.CpuId,
                 Name = c.Name,
                 CoreCount = c.CoreCount,
                 CoreClock = c.CoreClock,
@@ -51,7 +51,7 @@ namespace Inventory.SERVICES
             return cpuList;
         }
 
-        // Get (Details by ID)
+        // Get (Details by CpuId)
         public CPUDetail GetCpuById(int cpuId)
         {
             using (var _db = new ApplicationDbContext())
@@ -60,11 +60,11 @@ namespace Inventory.SERVICES
                 var cpuEntity =
                     _db
                     .CPUs
-                    .SingleOrDefault(e => e.Id == cpuId);
+                    .SingleOrDefault(e => e.CpuId == cpuId);
                 return
                 new CPUDetail
                 {
-                    Id = cpuEntity.Id,
+                    CpuId = cpuEntity.CpuId,
                     Name = cpuEntity.Name,
                     Manufacturer = cpuEntity.Manufacturer,
                     CoreCount = cpuEntity.CoreCount,
@@ -89,9 +89,9 @@ namespace Inventory.SERVICES
                 var cpuEntity =
                     _db
                         .CPUs
-                        .SingleOrDefault(e => e.Id == model.Id);
+                        .SingleOrDefault(e => e.CpuId == model.CpuId);
 
-                cpuEntity.Id = model.Id;
+                cpuEntity.CpuId = model.CpuId;
                 cpuEntity.Name = model.Name;
                 cpuEntity.Manufacturer = model.Manufacturer;
                 cpuEntity.CoreCount = model.CoreCount;
@@ -110,7 +110,7 @@ namespace Inventory.SERVICES
             }
         }
 
-        // Delete by ID
+        // Delete by CpuId
         public bool DeleteCpu(int cpuId)
         {
             using (_db)
@@ -118,7 +118,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .CPUs
-                        .SingleOrDefault(e => e.Id == cpuId);
+                        .SingleOrDefault(e => e.CpuId == cpuId);
 
                 _db.CPUs.Remove(entity);
 

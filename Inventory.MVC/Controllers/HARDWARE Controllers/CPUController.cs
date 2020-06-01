@@ -52,7 +52,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             var detail = service.GetCpuById(id);
             var model = new CPUEdit
             {
-                Id = detail.Id,
+                CpuId = detail.Id,
                 Manufacturer = detail.Manufacturer,
                 Series = detail.Series,
                 CoreFamily = detail.CoreFamily,
@@ -75,7 +75,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
         public ActionResult Edit(int id, CPUEdit model)
         {
 
-            if (model.Id != id)
+            if (model.CpuId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

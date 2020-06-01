@@ -5,7 +5,7 @@ namespace Inventory.MODELS.MemeoryModels
     public class MemoryListItem
     {
         [Required]
-        public int Id { get; set; }
+        public int MemoryId { get; set; }
         [Required]
         public string Name { get; set; }
 

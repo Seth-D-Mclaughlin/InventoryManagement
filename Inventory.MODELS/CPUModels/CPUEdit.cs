@@ -5,7 +5,7 @@ namespace Inventory.MODELS.CPUModels
     public class CPUEdit
     {
         [Required]
-        public int Id { get; set; }
+        public int CpuId { get; set; }
         [Required]
         public string Name { get; set; }
 

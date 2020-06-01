@@ -9,7 +9,7 @@ namespace Inventory.MODELS.VideoCardModels
 {
     public class VideoCardDetail
     {
-        public int Id { get; set; }
+        public int VideoId { get; set; }
         public string Name { get; set; }
         public string Manufacturer { get; set; }
         public string Chipset { get; set; }
