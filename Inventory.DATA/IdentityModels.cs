@@ -25,7 +25,7 @@ namespace Inventory.DATA
         {
         }
         public DbSet<CPU> CPUs { get; set; }
-        public DbSet<CPUCooler> CPUCoolers { get; set; }
+        
         public DbSet<Case> Cases { get; set; }
         public DbSet<PowerSupplyUnit> PowerSupplyUnits { get; set; }
         public DbSet<Storage> Storages { get; set; }

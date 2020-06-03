@@ -16,6 +16,8 @@ namespace Inventory.MODELS.InternalStorageModels
         public string Manufacturer { get; set; }
 
         [Required]
+        [Display(Name = "In use?")]
+
         public bool IsAvailable { get; set; }
 
         [Required]
@@ -26,6 +28,8 @@ namespace Inventory.MODELS.InternalStorageModels
 
         [Required]
         public string Type { get; set; }
+        [Display(Name = "Form Factor")]
+
         public string FormFactor { get; set; }
         public bool NVME { get; set; }
     }

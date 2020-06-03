@@ -11,6 +11,7 @@ namespace Inventory.DATA
     public class Project
     {
         [Required]
+        [Key]
         public int ProjectId { get; set; }
         
         [Required]
@@ -22,42 +23,38 @@ namespace Inventory.DATA
 
 
 
-        [ForeignKey(nameof(MemoryId))]
-        public int MemoryId { get; set; }
+        public int? MemoryId { get; set; }
+        [ForeignKey("MemoryId")]
         public virtual Memory Memory { get; set; }
 
 
-        [ForeignKey(nameof(Case))]
-        public int CaseId { get; set; }
+        public int? CaseId { get; set; }
+        [ForeignKey("CaseId")]
         public virtual Case Case { get; set; }
 
 
-        [ForeignKey(nameof(CoolerId))]
-        public int CoolerId { get; set; }
+        public int? CoolerId { get; set; }
+        [ForeignKey("CoolerId")]
         public virtual CPUCooler CPUCooler { get; set; }
         
-        [ForeignKey(nameof(CpuId))]
-        public int CpuId { get; set; }
+        public int? CpuId { get; set; }
+        [ForeignKey("CpuId")]
         public virtual CPU CPU { get; set; }
 
 
-        [ForeignKey(nameof(VideoId))]
-        public int VideoId { get; set; }
+        public int? VideoId { get; set; }
+        [ForeignKey("VideoId")]
         public virtual VideoCard VideoCard { get; set; }
 
 
-        [ForeignKey(nameof(MotherboardId))]
-        public int MotherboardId { get; set; }
+        public int? MotherboardId { get; set; }
+        [ForeignKey("MotherboardId")]
         public virtual Motherboard Motherboard { get; set; }
 
 
-        [ForeignKey(nameof(PsuId))]
-        public int PsuId { get; set; }
+        public int? PsuId { get; set; }
+        [ForeignKey("PsuId")]
         public virtual PowerSupplyUnit PowerSupplyUnit { get; set; }
 
-
-        //[ForeignKey(nameof(InternalStorage))]
-        //public int InternalId { get; set; }
-        //public virtual InternalStorage InternalStorage { get; set; }
     }
 }

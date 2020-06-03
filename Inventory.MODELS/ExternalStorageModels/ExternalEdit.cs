@@ -18,6 +18,7 @@ namespace Inventory.MODELS.ExternalStorageModels
         public string Manufacturer { get; set; }
 
         [Required]
+        [Display(Name = "In use?")]
         public bool IsAvailable { get; set; }
 
         [Required]
@@ -29,6 +30,7 @@ namespace Inventory.MODELS.ExternalStorageModels
         [Required]
         public string Type { get; set; }
         public string Color { get; set; }
+        [Display(Name = "Portable")]
         public bool IsPortiable { get; set; }
     }
 }

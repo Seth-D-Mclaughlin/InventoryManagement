@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Details";
 }
-
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 <h2>Details</h2>
 
 <div>
@@ -77,6 +77,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn-sm btn-primary" }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PsuId }, htmlAttributes: new { @class = "btn-sm btn-primary" }) |
     @Html.ActionLink("Back to List", "Index", new { }, htmlAttributes: new { @class = "btn-sm btn-info" })
 </p>

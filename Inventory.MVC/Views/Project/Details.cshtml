@@ -1,0 +1,88 @@
+﻿@model Inventory.MODELS.ProjectModels.ProjectDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<div>
+    <h2>Project Details</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CpuId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPU.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MemoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Memory.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Case.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VideoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VideoCard.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotherboardId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Motherboard.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PsuId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PowerSupplyUnit.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProjectId}, htmlAttributes: new { @class = "btn-xs btn-warning" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

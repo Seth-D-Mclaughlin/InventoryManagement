@@ -18,6 +18,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Inventory Management System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Projects", "Index", "Project", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -31,7 +32,6 @@
                             <li>@Html.ActionLink("Video Card", "Create", "VideoCard")</li>
                             <li>@Html.ActionLink("Power Supply Unit", "Create", "PSU")</li>
                             <li>@Html.ActionLink("Memory", "Create", "Memory")</li>
-                            <li>@Html.ActionLink("Optical Drives", "Create", "OD")</li>
                             <li>@Html.ActionLink("Case", "Create", "Case")</li>
 
                         </ul>
@@ -51,11 +51,10 @@
                                 <li>@Html.ActionLink("Video Card", "Index", "VideoCard")</li>
                                 <li>@Html.ActionLink("Power Supply Unit", "Index", "PSU")</li>
                                 <li>@Html.ActionLink("Memory", "Index", "Memory")</li>
-                                <li>@Html.ActionLink("Optical Drives", "Index", "OD")</li>
                                 <li>@Html.ActionLink("Case", "Index", "Case")</li>
-                                
                             </ul>
                     </li>
+                    <li></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

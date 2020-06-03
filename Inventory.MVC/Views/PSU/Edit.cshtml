@@ -3,18 +3,17 @@
 @{
     ViewBag.Title = "Edit";
 }
-
-<h2>Edit</h2>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>PSUEdit</h4>
+        <h2>Power Supply Unit</h2>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.PsuId)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })

@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaseService.cs" />
-    <Compile Include="CPUCoolerService.cs" />
     <Compile Include="CPUService.cs" />
     <Compile Include="InternalService.cs" />
     <Compile Include="ExternalService.cs" />

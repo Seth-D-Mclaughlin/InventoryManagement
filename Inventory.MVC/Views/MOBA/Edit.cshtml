@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 <h2>Edit</h2>
 
 @using (Html.BeginForm())
@@ -14,7 +14,7 @@
         <h4>MOBAEdit</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.MotherboardId)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })

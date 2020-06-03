@@ -1,4 +1,5 @@
 ﻿using Inventory.DATA;
+using Inventory.MODELS.CPUModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,31 +11,38 @@ namespace Inventory.MODELS.ProjectModels
 {
     public class ProjectDetail
     {
-        [Required]
+        public int ProjectId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Notes { get; set; }
 
-
-        public int CpuId { get; set; }
+        [Display(Name = "CPU")]
+        public int? CpuId { get; set; }
         public virtual CPU CPU { get; set; }
+        // public CPUDetail CPU { get; set; }
 
-        public int MemoryId { get; set; }
+        [Display(Name = "Memory")]
+        public int? MemoryId { get; set; }
         public virtual Memory Memory { get; set; }
 
-        public int CaseId { get; set; }
+        [Display(Name = "Case")]
+        public int? CaseId { get; set; }
         public virtual Case Case { get; set; }
 
-        public int CoolerId { get; set; }
+        [Display(Name = "CPU Cooler")]
+        public int? CoolerId { get; set; }
         public virtual CPUCooler CPUCooler { get; set; }
 
-        public int VideoId { get; set; }
+        [Display(Name = "Video Card")]
+        public int? VideoId { get; set; }
         public virtual VideoCard VideoCard { get; set; }
 
-        public int MotherboardId { get; set; }
+        [Display(Name = "Motherboard")]
+        public int? MotherboardId { get; set; }
         public virtual Motherboard Motherboard { get; set; }
 
-        public int PsuId { get; set; }
+        [Display(Name = "Power Supply")]
+        public int? PsuId { get; set; }
         public virtual PowerSupplyUnit PowerSupplyUnit { get; set; }
     }
 }

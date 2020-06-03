@@ -10,6 +10,7 @@ namespace Inventory.MODELS.ProjectModels
 {
     public class ProjectListItem
     {
+        public int ProjectId { get; set; }
         [Required]
         public string Name { get; set; }
         public string Notes { get; set; }

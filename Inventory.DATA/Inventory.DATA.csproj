@@ -83,6 +83,26 @@
     <Compile Include="Migrations\202005281920211_may28.Designer.cs">
       <DependentUpon>202005281920211_may28.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006021858173_june2.cs" />
+    <Compile Include="Migrations\202006021858173_june2.Designer.cs">
+      <DependentUpon>202006021858173_june2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006030314081_june21114.cs" />
+    <Compile Include="Migrations\202006030314081_june21114.Designer.cs">
+      <DependentUpon>202006030314081_june21114.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031245289_June3.cs" />
+    <Compile Include="Migrations\202006031245289_June3.Designer.cs">
+      <DependentUpon>202006031245289_June3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031250064_June3850.cs" />
+    <Compile Include="Migrations\202006031250064_June3850.Designer.cs">
+      <DependentUpon>202006031250064_June3850.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006031329548_June3929.cs" />
+    <Compile Include="Migrations\202006031329548_June3929.Designer.cs">
+      <DependentUpon>202006031329548_June3929.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +128,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005281920211_may28.resx">
       <DependentUpon>202005281920211_may28.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006021858173_june2.resx">
+      <DependentUpon>202006021858173_june2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006030314081_june21114.resx">
+      <DependentUpon>202006030314081_june21114.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031245289_June3.resx">
+      <DependentUpon>202006031245289_June3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031250064_June3850.resx">
+      <DependentUpon>202006031250064_June3850.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006031329548_June3929.resx">
+      <DependentUpon>202006031329548_June3929.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

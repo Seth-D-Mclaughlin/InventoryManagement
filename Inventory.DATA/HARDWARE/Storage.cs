@@ -27,8 +27,8 @@ namespace Inventory.DATA
         [Required]
         public string Type { get; set; }
 
-        public int? ProjectId { get; set; }
-        [ForeignKey(nameof(ProjectId))]
-        public virtual Project Project { get; set; }
+        //public int? ProjectId { get; set; }
+        //[ForeignKey(nameof(ProjectId))]
+        //public virtual Project Project { get; set; }
     }
 }

@@ -52,7 +52,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             var detail = service.GetCpuById(id);
             var model = new CPUEdit
             {
-                CpuId = detail.Id,
+                CpuId = detail.CpuId,
                 Manufacturer = detail.Manufacturer,
                 Series = detail.Series,
                 CoreFamily = detail.CoreFamily,

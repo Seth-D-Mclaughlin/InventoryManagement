@@ -4,7 +4,7 @@
     ViewBag.Title = "Delete";
 }
 
-
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 
 
 <div>
@@ -12,7 +12,7 @@
         Are you sure you want to remove this: 
 
     </h3>
-        <h3><b>"@Html.DisplayFor(model => model.Name)"</b>?</h3>
+        <h3><b>@Html.DisplayFor(model => model.Name)</b>?</h3>
     <hr />
     <dl class="dl-horizontal">
         <dt>

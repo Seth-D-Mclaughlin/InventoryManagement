@@ -50,6 +50,7 @@ namespace Inventory.SERVICES
             }).ToList();
             return cpuList;
         }
+       
 
         // Get (Details by CpuId)
         public CPUDetail GetCpuById(int cpuId)

@@ -17,26 +17,33 @@ namespace Inventory.MODELS.ProjectModels
         public string Description { get; set; }
         public string Notes { get; set; }
 
-        public int CpuId { get; set; }
-        public virtual CPU CPU { get; set; }
+        [Display(Name ="CPU")]
+        public int? CpuId { get; set; }
+        public CPU CPU { get; set; }
 
-        public int MemoryId { get; set; }
-        public virtual Memory Memory { get; set; }
+        [Display(Name = "Memory")]
 
-        public int CaseId { get; set; }
-        public virtual Case Case { get; set; }
+        public int? MemoryId { get; set; }
+        public Memory Memory { get; set; }
 
-        public int CoolerId { get; set; }
-        public virtual CPUCooler CPUCooler { get; set; }
+        [Display(Name = "Case")]
+        public int? CaseId { get; set; }
+        public  Case Case { get; set; }
 
-        public int VideoId { get; set; }
-        public virtual VideoCard VideoCard { get; set; }
+        public int? CoolerId { get; set; }
+        public  CPUCooler CPUCooler { get; set; }
+        
+        [Display(Name = "Video Card")]
+        public int? VideoId { get; set; }
+        public  VideoCard VideoCard { get; set; }
 
-        public int MotherboardId { get; set; }
-        public virtual Motherboard Motherboard { get; set; }
+        [Display(Name = "Motherboard")]
+        public int? MotherboardId { get; set; }
+        public  Motherboard Motherboard { get; set; }
 
-        public int PsuId { get; set; }
-        public virtual PowerSupplyUnit PowerSupplyUnit { get; set; }
+        [Display(Name = "Power Supply")]
+        public int? PsuId { get; set; }
+        public  PowerSupplyUnit PowerSupplyUnit { get; set; }
 
     }
 }

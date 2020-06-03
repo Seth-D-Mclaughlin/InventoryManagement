@@ -49,8 +49,8 @@ namespace Inventory.DATA
         [Required]
         public int ThermalDesignPower { get; set; }
 
-        public int? ProjectId { get; set; }
-        [ForeignKey(nameof(ProjectId))]
-        public virtual Project Project { get; set; }
+        //public int? ProjectId { get; set; }
+        //[ForeignKey(nameof(ProjectId))]
+        //public virtual Project Project { get; set; }
     }
 }

@@ -1,8 +1,31 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: darkgray;
 }
-
+th{
+    font-size: large;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    
+}
+tr{
+    font-size: 14px;
+    font-weight:600;
+    table-layout: fixed;
+}
+dt{
+    font-size:large;
+    border-top-width: 4px;
+}
+dd{
+    font-size:medium;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+}
+.jumbotron{
+    align-content:center;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

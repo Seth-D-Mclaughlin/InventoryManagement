@@ -53,7 +53,7 @@ namespace Inventory.MVC.Controllers.HARDWARE_Controllers
             var detail = service.GetMemoryById(id);
             var model = new MemoryEdit
             {
-                MemoryId = detail.Id,
+                MemoryId = detail.MemoryId,
                 Name = detail.Name,
                 Manufacturer = detail.Manufacturer,
                 Speed = detail.Speed,

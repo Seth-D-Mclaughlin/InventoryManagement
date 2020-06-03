@@ -36,7 +36,7 @@ namespace Inventory.SERVICES
             var ExternalEntities = _db.ExternalStorages.ToList();
             var ExternalList = ExternalEntities.Select(c => new ExternalListItem
             {
-                Id = c.Id,
+                Id = c.StorageId,
                 Name = c.Name,
                 Interface = c.Interface,
                 Capacity = c.Capacity,
@@ -55,11 +55,11 @@ namespace Inventory.SERVICES
                 var ExternalEntity =
                     _db
                     .ExternalStorages
-                    .SingleOrDefault(e => e.Id == ExternalId);
+                    .SingleOrDefault(e => e.StorageId == ExternalId);
                 return
                 new ExternalDetail
                 {
-                    Id = ExternalEntity.Id,
+                    Id = ExternalEntity.StorageId,
                     Name = ExternalEntity.Name,
                     Manufacturer = ExternalEntity.Manufacturer,
                     Interface = ExternalEntity.Interface,
@@ -80,9 +80,9 @@ namespace Inventory.SERVICES
                 var ExternalEntity =
                     _db
                         .ExternalStorages
-                        .SingleOrDefault(e => e.Id == model.Id);
+                        .SingleOrDefault(e => e.StorageId == model.Id);
 
-                ExternalEntity.Id = model.Id;
+                ExternalEntity.StorageId = model.Id;
                 ExternalEntity.Name = model.Name;
                 ExternalEntity.Manufacturer = model.Manufacturer;
                 ExternalEntity.Interface = model.Interface;
@@ -103,7 +103,7 @@ namespace Inventory.SERVICES
                 var entity =
                     _db
                         .ExternalStorages
-                        .SingleOrDefault(e => e.Id == ExternalId);
+                        .SingleOrDefault(e => e.StorageId == ExternalId);
 
                 _db.ExternalStorages.Remove(entity);
 

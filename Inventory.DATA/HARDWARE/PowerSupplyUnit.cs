@@ -37,8 +37,8 @@ namespace Inventory.DATA
         [Required]
         public bool IsAvailable { get; set; }
 
-        public int? ProjectId { get; set; }
-        [ForeignKey(nameof(ProjectId))]
-        public virtual Project Project { get; set; }
+        //public int? ProjectId { get; set; }
+        //[ForeignKey(nameof(ProjectId))]
+        //public virtual Project Project { get; set; }
     }
 }

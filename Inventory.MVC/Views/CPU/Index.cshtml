@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 <h2>List of your CPUs</h2>
 
 <p>
@@ -53,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.IsAvailable)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }, htmlAttributes: new { @class = "btn-xs btn-warning" }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id },  htmlAttributes: new { @class = "btn-xs btn-info" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, htmlAttributes: new { @class = "btn-xs btn-danger" })
+            @Html.ActionLink("Edit", "Edit", new {id = item.CpuId}, htmlAttributes: new { @class = "btn-xs btn-warning" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CpuId },  htmlAttributes: new { @class = "btn-xs btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CpuId }, htmlAttributes: new { @class = "btn-xs btn-danger" })
         </td>
     </tr>
 }

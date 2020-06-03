@@ -14,6 +14,7 @@ namespace Inventory.SERVICES
         {
             Case entity = new Case
             {
+                
                 Name = model.Name,
                 Manufacturer = model.Manufacturer,
                 Color = model.Color,
@@ -60,7 +61,7 @@ namespace Inventory.SERVICES
                 var caseEntity =
                     _db
                     .Cases
-                    .SingleOrDefault(e => e.Id == caseId);
+                    .SingleOrDefault(e => e.CaseId == caseId);
                 return
                 new CaseDetail
                 {

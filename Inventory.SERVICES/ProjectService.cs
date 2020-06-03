@@ -26,8 +26,6 @@ namespace Inventory.SERVICES
                 Memory = model.Memory,
                 CaseId = model.CaseId,
                 Case = model.Case,
-                CoolerId = model.CoolerId,
-                CPUCooler = model.CPUCooler,
                 VideoId = model.VideoId,
                 VideoCard = model.VideoCard,
                 MotherboardId = model.MotherboardId,
@@ -45,6 +43,7 @@ namespace Inventory.SERVICES
             var ProjectEntities = _db.Projects.ToList();
             var projectList = ProjectEntities.Select(c => new ProjectListItem
             {
+                ProjectId = c.ProjectId,
                 Name = c.Name,
                 Notes = c.Notes
             }).ToList();
@@ -63,17 +62,17 @@ namespace Inventory.SERVICES
                 return
                 new ProjectDetail
                 {
+                    ProjectId = projectEntity.ProjectId,
                     Name = projectEntity.Name,
                     Description = projectEntity.Description,
                     Notes = projectEntity.Notes,
                     CpuId = projectEntity.CpuId,
                     CPU = projectEntity.CPU,
+                   // CPUDetail = ConvertEntityToDetailModel(projectEntity.CPU);
                     MemoryId = projectEntity.MemoryId,
                     Memory = projectEntity.Memory,
                     CaseId = projectEntity.CaseId,
                     Case = projectEntity.Case,
-                    CoolerId = projectEntity.CoolerId,
-                    CPUCooler = projectEntity.CPUCooler,
                     VideoId = projectEntity.VideoId,
                     VideoCard = projectEntity.VideoCard,
                     MotherboardId = projectEntity.MotherboardId,
@@ -91,7 +90,7 @@ namespace Inventory.SERVICES
                     _db
                         .Projects
                         .SingleOrDefault(e => e.ProjectId == model.ProjectId);
-
+                ProjectEntity.ProjectId = model.ProjectId;
                 ProjectEntity.Name = model.Name;
                 ProjectEntity.CpuId = model.CpuId;
                 ProjectEntity.CPU = model.CPU;
@@ -99,8 +98,6 @@ namespace Inventory.SERVICES
                 ProjectEntity.Memory = model.Memory;
                 ProjectEntity.CaseId = model.CaseId;
                 ProjectEntity.Case = model.Case;
-                ProjectEntity.CoolerId = model.CoolerId;
-                ProjectEntity.CPUCooler = model.CPUCooler;
                 ProjectEntity.VideoId = model.VideoId;
                 ProjectEntity.VideoCard = model.VideoCard;
                 ProjectEntity.MotherboardId = model.MotherboardId;
@@ -126,5 +123,7 @@ namespace Inventory.SERVICES
                 return _db.SaveChanges() == 1;
             }
         }
+
+        
     }
 }
