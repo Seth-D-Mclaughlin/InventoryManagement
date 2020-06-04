@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Inventory Management System</title>
+    <title>@ViewBag.Title - SCIMS</title>
+    <link rel="shortcut icon" type="img/png" href="~/Content/Assets/blackpower.png" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,11 +18,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Inventory Management System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Projects", "Index", "Project", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("SCIMS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Create a project", "Create", "Project")</li>
+                            <li>@Html.ActionLink("View your projects", "Index", "Project")</li>
+                        </ul>
+
+                    </li>
                     <li>
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Create new entry</a>
                         <ul class="dropdown-menu">
@@ -69,7 +78,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Inventory Management System</p>
+            <p style="color:black">&copy; @DateTime.Now.Year - Seth's Computer Inventory Management System <span class="col-md-offset-5"><a style="color:black;" href="https://black-lives-matter-resources.web.app/"><b>Support #BlackLivesMatter</b></a><img src="~/Content/Assets/blackpower.png" width="18" style="padding-left:6px" /></span></p>
+            
         </footer>
     </div>
 

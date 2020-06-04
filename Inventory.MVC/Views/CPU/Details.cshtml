@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-<h2>Details</h2>
+<h2>Details for</h2>
 
 <div>
-    <h4>CPUDetail</h4>
+    <h4><em>@Html.DisplayFor(model => Model.Name)</em></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>

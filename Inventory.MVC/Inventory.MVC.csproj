@@ -197,6 +197,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assets\blackpower.png" />
     <Content Include="Content\Assets\Cpu.jpg" />
     <Content Include="Content\Assets\cpu1.jpg" />
     <Content Include="Content\Assets\monitor.jpg" />
