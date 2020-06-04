@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Assets\Cpu.jpg" />
+    <Content Include="Content\Assets\cpu1.jpg" />
     <Content Include="Content\Assets\monitor.jpg" />
     <Content Include="Content\Assets\Motherboard.jpg" />
     <Content Include="Content\Assets\powersupplyunit.jpg" />

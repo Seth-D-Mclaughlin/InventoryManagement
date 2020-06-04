@@ -1,47 +1,78 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: darkgray;
-}
-th{
-    font-size: large;
-    border-left-style: solid;
-    border-bottom-style: solid;
-    
-}
-tr{
-    font-size: 14px;
-    font-weight:600;
-    table-layout: fixed;
-}
-dt{
-    font-size:large;
-    border-top-width: 4px;
-}
-dd{
-    font-size:medium;
-    border-bottom-width: thin;
-    border-bottom-color: black;
-}
-.jumbotron{
-    align-content:center;
-}
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+﻿:root {
+    --primary: deepPink;
+    --headerBg: #1d1d26;
+    --textColor: #0e0f0f;
+    --textColorInverse: #fcfdff;
+    --bg: #fcfdff;
+    --bgTint: #dfeded;
+    --bgGrey: #e6e8e8;
+    --white: #fcfdff;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #161618;
+        --bgTint: #27272c;
+        --textColor: #dbd7db;
+        --bgGrey: #27272c;
+        --textColorInverse: #0e0f0f;
+    }
+}
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        background-color: darkgray;
+    }
+
+    th {
+        font-size: large;
+        border-left-style: solid;
+        border-bottom-style: solid;
+    }
+    td{
+        text-align: center;
+    }
+    tr {
+        font-size: 14px;
+        font-weight: 600;
+        table-layout: fixed;
+    }
+
+    dt {
+        font-size: large;
+        border-top-width: 4px;
+    }
+
+    dd {
+        font-size: medium;
+        border-bottom-width: thin;
+        border-bottom-color: black;
+    }
+
+    .jumbotron {
+        padding-top: inherit;
+        background-color:lightgray;
+    }
+    .jumbotron h1{
+        padding-top:10px;
+    }
+    /* Set padding to keep content from hitting the edges */
+    .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
-    white-space: normal;
-}
+    .dl-horizontal dt {
+        white-space: normal;
+    }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+    /* Set width on the form input elements since they're 100% wide by default */
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+

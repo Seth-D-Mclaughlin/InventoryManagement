@@ -1,16 +1,35 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
 
 <div class="jumbotron">
     <h1>Computer Inventory </h1>
     <p class="lead">SCIMS is a personal inventory management system for computer hobbyist.</p>
     <img src="~/Content/Assets/ras.jpg" class="img-circle center-block" alt="Raspberry Pi Cluster" width="400">
 </div>
-
-<div class="row">
-   <div class="col-lg-4">
-
-   </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle center-block" src="~/Content/Assets/cpu.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>CPU</h2>
+            <p>Stands for "Central Processing Unit." The CPU is the primary component of a computer that processes instructions. It runs the operating system and applications, constantly receiving input from the user or active software programs. It processes the data and produces output, which may stored by an application or displayed on the screen.</p>
+            
+        </div><!-- /.col-lg-4 -->
+        
+        <div class="col-lg-4">
+            <img class="img-circle center-block" src="~/Content/Assets/memory.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Memory</h2>
+            <p>While memory can refer to any medium of data storage, it usually refers to RAM, or random access memory. When your computer boots up, it loads the operating system into its memory, or RAM. This allows your computer to access system functions, such as handling mouse clicks and keystrokes, since the event handlers are all loaded into RAM. Whenever you open a program, the interface and functions used by that program are also loaded into RAM.</p>
+            
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle center-block" src="~/Content/Assets/videocard.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Video Card</h2>
+            <p>Most of the processing done on a computer is done via the computer's central processing unit, or CPU. So in order to give the CPU a break and help it run more efficiently, a video card can be used to process the graphics portion of the processing load. Because most of today's programs are graphically oriented, the video card can help almost any program run more efficiently. However, the difference in performance is especially noticeable in image editing applications and 3D games.</p>
+            
+        </div><!-- /.col-lg-4 -->
+    </div>
 </div>
+
+   
